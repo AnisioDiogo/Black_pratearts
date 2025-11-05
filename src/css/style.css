@@ -1,0 +1,484 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	text-decoration: none;
+}
+
+:root {
+	--verde-escuro:#3C4D39;
+	--verde-claro:#92A48B ;
+	--rose: #C3B2C6;
+	--marrom: #939393;
+	--bege: #F1EDEC;
+	--dourado: #AF8F5C;
+	--preto: #000000;
+    --fustat: "Fustat", serif;
+    --alexandria: "Alexandria", serif;
+    --kadwa: "Kadwa", serif;
+    --footer-font: "ABeeZee", sans-serif;
+}
+
+
+body {
+	font-family: "Gabriela", serif;
+	text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.274), rgb(0, 0, 0)), url(../image/fundo\ promo.jpg);
+}
+
+header {
+	padding: 20px;
+	img{
+		width: 350px;
+		height: 250px;
+	}
+}
+
+
+.intro {
+	margin-bottom: 30px;
+	padding: 0 20px;
+	color: var(--bege);
+
+	& h1 {
+		text-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
+	}
+
+	& h4 {
+		margin-top: 10px;
+		font-size: 1.2rem;
+		font-weight: 400;
+		line-height: 1.5;
+		background-color: var(--verde-escuro);
+		width: 45%;
+		text-align: center;
+		margin: 0 auto;
+	}
+}
+
+iframe {
+	margin-bottom: 30px;
+	border-radius: 20px;
+}
+
+button{
+	padding: 30px 70px;
+	margin-bottom: 50px;
+	color: var(--preto);
+	background-color: var(--dourado);
+	width: 55%;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 40px;
+	text-decoration: none;
+	font-family: "Gabriela", serif;
+	font-size: 30px;
+	cursor: pointer;
+	font-weight: 600;
+	transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+	background-color: var(--bege);
+	color: var(--preto);
+	transform: scale(1.05);
+}
+.beneficios {
+	margin: 50px;
+
+	& h2 {
+		margin-bottom: 30px;
+        font-size: 40px;
+		color: var(--bege);
+	}
+	.Beneficio1 {
+    display: flex;
+    background-color: var(--bege);
+    width: 350px;
+    min-height: 100px; 
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+}
+.Benficios-cards {
+    display: grid;
+    
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 20px;
+  justify-items: center; 
+
+    max-width: 1200px; /* Escolha um valor que limite o agrupamento (ex: 1200px) */
+    margin: 0 auto; /* Centraliza o container na página */    
+    text-align: center;
+
+
+/* --- Container do Ícone/Círculo (Chave do posicionamento) --- */
+.icone-box {
+    position: relative; 
+    width: 80px; 
+    height: 80px; 
+    margin-right: 20px;
+}
+
+/* --- O Círculo Colorido (Fundo da Imagem) --- */
+.backgrodb {
+    background-color: var(--dourado);
+    width: 80px; 
+    height: 80px;
+    border-radius: 50%; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; 
+}
+
+.Beneficio1 img {
+    position: absolute;
+    top: 41px;
+    left: 40px;
+    transform: translate(-50%, -50%); 
+    
+    width: 60px; 
+    height: 60px;
+    z-index: 1; 
+    margin-right: 0; 
+}
+
+/* --- Texto do Benefício --- */
+.Beneficio1 h3 {
+    font-size: 15px;
+    color: var(--preto);
+    margin: 0; 
+}
+}
+
+
+/* --- Estilos da Seção do Catálogo --- */
+.catalogo {
+    /* Removendo a margem lateral que pode dificultar a centralização */
+    margin: 50px 0; 
+    text-align: center; /* Centraliza o H2 */
+
+    & h2 {
+        margin-bottom: 20px;
+        font-size: 40px;
+        color: var(--bege);
+    }
+}
+
+.imagens__grid {
+    display: grid;
+    
+    /* 1. LAYOUT 2 COLUNAS: Define 2 colunas iguais */
+    grid-template-columns: repeat(3, 1fr); 
+    
+    /* 2. CENTRALIZAÇÃO DO BLOCO: Define a largura máxima do grid e centraliza */
+    max-width: 650px; /* Ajuste este valor para controlar a largura do bloco */
+    margin: 0 auto; /* Centraliza o bloco do Grid horizontalmente */
+    align-items: center;
+	justify-content: center;
+    /* 3. ESPAÇAMENTO: Adicione um gap (espaço entre as imagens) */
+    gap: 15px; /* Espaçamento entre as linhas e colunas */
+
+    /* place-items: center; pode ser útil, mas o margin auto já resolve a centralização do bloco */
+    padding: 10px;
+    
+    & img {
+        /* Garante que a imagem preencha o espaço da célula */
+        width: 300px; 
+        height: 450px;
+        
+        border-radius: 20px;
+        /* A borda da imagem na sua foto parece ser mais fina */
+        border: 3px solid var(--marrom); 
+    }
+}
+
+/* --- Estilos da Seção de Depoimentos --- */
+/* --- Estilos da Seção de Depoimentos (mantidos do código anterior) --- */
+
+.depoimentos {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.depoimentos__titulo {
+    color: var(--bege); 
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.depoimento-card {
+    background-color: #D3B89E; 
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px; /* Aumentei um pouco o padding para dar mais espaço */
+    border-radius: 10px;
+    color: var(--preto); 
+    text-align: left;
+    
+    /* Removida a borda para ficar mais limpo como na imagem */
+    /* border: 1px solid var(--dourado); */ 
+}
+
+.depoimento-card__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.depoimento-card__avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    border: 2px solid var(--dourado); 
+}
+
+.depoimento-card__nome {
+    font-weight: bold;
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.depoimento-card__texto {
+    font-size: 0.95em;
+    line-height: 1.4;
+    margin-bottom: 15px; /* Adiciona espaço antes da foto da joia */
+    clear: both; /* Importante para limpar qualquer float anterior (se houver) */
+}
+
+/* ⭐️ BLOCO ATUALIZADO PARA POSICIONAR A FOTO ABAIXO ⭐️ */
+.depoimento-card__joia {
+    /* Removido o float: right; */
+    
+    /* Para que a imagem ocupe uma largura específica */
+    width: 150px; 
+    height: 190px;
+    
+    /* 1. Transforma a imagem em um elemento de bloco */
+    display: block; 
+    
+    /* 2. Centraliza a imagem no meio do card */
+    margin: 0 ; 
+    
+    border-radius: 15px;
+    /* Adicionei a borda sutil que aparece em volta da imagem da joia */
+    border: 1px solid #4B382D; /* Exemplo de cor de borda marrom escura */
+}
+
+/* Footer */
+/* --- Estilos do Footer --- */
+
+/* --- Estilos do Footer Corrigidos --- */
+.footer {
+    background-color: var(--preto); 
+    color: var(--bege);
+    padding: 2.5rem 1rem 0.5rem 1rem; /* Padding em cima e em baixo */
+    font-family: Arial, sans-serif;
+    line-height: 1.6; /* Melhora a leitura */
+}
+
+/* Linha divisória no topo */
+.linha {
+    border: 0;
+    border-top: 3px solid var(--dourado); /* Linha dourada */
+    margin: 0 auto 30px auto; /* Espaçamento abaixo da linha */
+    width: 100%;
+}
+
+.footer__content {
+    display: grid;
+    /* Define 3 colunas, com a Logo (1) sendo maior, e as outras 2 menores */
+    grid-template-columns: 2fr 1.5fr 1fr; 
+    
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o bloco Grid */
+    padding-bottom: 30px;
+    
+    /* Centraliza os itens verticalmente nas suas células */
+    align-items: flex-start; 
+}
+
+/* Títulos das Colunas */
+.footer__content h3 {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    color: var(--bege);
+}
+
+/* Coluna 1: Logo */
+.footer__coluna-1 {
+    display: flex; /* Para centralizar verticalmente a logo na sua coluna */
+    align-items: center;
+    /* Remover text-align: left, pois a logo está alinhada à esquerda no Figma */
+}
+
+.footer__logo {
+    max-width: 250px; /* Ajuste o tamanho da logo */
+    height: 100px;
+}
+.footer__coluna-2{
+    gap: 30px;
+    display: flex;
+}
+
+/* Coluna 2 e 3: Informações */
+.footer__coluna-2, .footer__coluna-3 {
+    padding: 0 1rem;
+    
+}
+
+.footer__secao{
+    width: 200px;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.footer__coluna-2 .footer__secao {
+    margin-bottom: 1.5rem; /* Espaçamento entre Rede Social e Contato */
+}
+
+.footer__coluna-2 p, .footer__coluna-2 a {
+    color: var(--bege);
+    text-decoration: none;
+    font-size: 0.95em;
+    margin: 0.3rem 0;
+    display: block; /* Para fazer cada item de contato ocupar uma linha */
+}
+
+
+
+/* Links do Departamento (vertical) */
+.footer__links a {
+    font-family: 'Montserrat', sans-serif;
+    display: block; 
+    color: var(--bege);
+    text-decoration: none;
+    margin: 0.3rem 0;
+    font-size: 0.95em;
+}
+
+/* Estilos para os Ícones (se você estiver usando Font Awesome) */
+.footer__social i, .footer__social img {
+    font-size: 1.5em;
+    width: 30px;
+    height: 30px;
+    opacity: 0.8;    
+    color: var(--bege);
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Slogan Final */
+.footer__slogan  {
+    font-family: "Gabriela", serif;
+    text-align: center;
+    font-size: 0.9rem;
+    padding-top: 10px;
+    margin: 0 auto;
+    font-size: 25px;
+}
+
+.footer__contact-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+/* * --------------------------------
+ * Media Queries para Mobile
+ * --------------------------------
+ */
+
+@media (max-width: 768px) {
+    /* Estilos aplicados em telas menores que 768px (tablets e celulares) */
+
+    .intro h1 {
+        font-size: 1.5rem;
+    }
+
+    .intro h4 {
+        /* Aumenta a largura para o texto ocupar mais espaço */
+        width: 80%;
+    }
+
+    button {
+        /* Diminui a fonte e o padding para caber na tela */
+        font-size: 1.1rem; 
+        padding: 10px 30px;
+		width: 90%;
+    }
+
+	iframe {
+		/* Ajusta a largura do iframe para caber na tela */
+		width: 90%;
+		height: auto;
+		border-radius: 20px;
+	}
+
+    .catalogo {
+        /* Diminui a margem do catálogo para otimizar o espaço */
+        margin: 20px;
+    }
+
+    .imagens__grid {
+        /* Muda o grid para duas colunas em tablets */
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer__content {
+        /* Empilha os elementos do footer na vertical */
+        flex-direction: column;
+    }
+
+    .footer__links a {
+        /* Aumenta a margem entre os links do footer para facilitar o toque */
+        margin: 0 0.5rem;
+    }
+
+	.video__mobile {
+	display: block;
+}
+}
+
+@media (max-width: 480px) {
+    /* Estilos aplicados em telas menores que 480px (celulares) */
+
+    .intro h1 {
+        font-size: 1.2rem;
+    }
+
+    .intro h4 {
+        font-size: 1rem;
+    }
+    
+    .imagens__grid {
+        /* Muda o grid para uma coluna para melhor visualização em telas pequenas */
+        grid-template-columns: 1fr;
+    }
+
+    .footer__links,
+    .footer__social {
+        /* Centraliza os links e redes sociais */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__links span {
+        display: none; /* Esconde os separadores de links */
+    }
+}
