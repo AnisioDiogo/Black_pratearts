@@ -411,6 +411,8 @@ button:hover {
 @media (max-width: 600px) {
     header img {
         width: 280px;
+        justify-content: center;
+        align-items: center;
         height: auto;
     }
 
@@ -436,6 +438,9 @@ button:hover {
 
     /* Benefícios e Catálogo mudam para 1 coluna */
     .Benficios-cards {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
         grid-template-columns: 1fr;
     }
 
